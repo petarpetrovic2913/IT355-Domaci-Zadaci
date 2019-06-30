@@ -77,7 +77,7 @@ body {
 			<form:textarea path="content" class="input-block-level" rows="10" />
 			<input type="submit" value="Create" class="btn btn-large btn-success">
 		</form:form>
-                
+             
 	</div>
 </body>
 </html>

@@ -29,24 +29,24 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-           <groupId>org.hibernate</groupId>
-           <artifactId>hibernate-core</artifactId>
-           <version>3.3.2.ga</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>3.3.2.ga</version>
         </dependency>
         <dependency>
-           <groupId>org.hibernate</groupId>
-           <artifactId>hibernate-annotations</artifactId>
-           <version>3.4.0.ga</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>3.4.0.ga</version>
         </dependency>
         <dependency>
-           <groupId>org.hibernate</groupId>
-           <artifactId>hibernate-commons-annotations</artifactId>
-           <version>3.3.0.ga</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>3.3.0.ga</version>
         </dependency>
         <dependency>
-           <groupId>org.hibernate</groupId>
-           <artifactId>hibernate-entitymanager</artifactId>
-           <version>3.4.0.ga</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>3.4.0.ga</version>
         </dependency> 
 
 
@@ -171,8 +171,14 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.7</version>
+            <version>4.10</version>
             <scope>test</scope>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -247,6 +253,11 @@
                 </configuration>
             </plugin>
         </plugins>
+        <testResources>
+            <testResource>
+                <directory>${basedir}/src/main/resources</directory>
+            </testResource>
+        </testResources>
     </build>
     <repositories>
         <repository>

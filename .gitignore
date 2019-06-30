@@ -9,3 +9,4 @@
 *.project
 *.springBeans
 /target/
+/nbproject/
