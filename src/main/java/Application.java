@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
  * and open the template in the editor.
  */
 
-
 @RestController
 @EnableAutoConfiguration
 public class Application {
