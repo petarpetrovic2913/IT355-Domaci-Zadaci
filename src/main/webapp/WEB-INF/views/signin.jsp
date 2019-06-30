@@ -64,7 +64,7 @@ body {
 				class="btn btn-large btn-success">
 			<a href="user/create">Don't have an account? Register Now</a>
 		</form:form>
-           
+            
 	</div>
 </body>
 </html>

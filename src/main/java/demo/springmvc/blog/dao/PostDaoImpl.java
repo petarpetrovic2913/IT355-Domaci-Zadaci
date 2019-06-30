@@ -59,5 +59,9 @@ public class PostDaoImpl implements PostDao{
 	}
         logger.info("Post deleted successfully, Post details="+p);
     }
+
+    public void updatePost(String response) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
