@@ -11,7 +11,7 @@
         <title>IT355</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <title>Register</title>
 
         <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -24,24 +24,40 @@
     </head>
     <body>
         <%@include file="header.jsp" %>
-
+        <c:choose>
+            <c:when test="${empty username}">
+            </c:when>
+            <c:otherwise>
+                <h2>User ${username} <br/>you are not allowed to see this page.</h2>
+                </c:otherwise>
+            </c:choose>
         <div class="login-page">
             <div class="form">
-                <form class="register-form">
-                    <input type="text" placeholder="Name"/>
-                    <input type="password" placeholder="Password"/>
-                    <input type="password" placeholder="Confirm password"/>
-                    <input type="text" placeholder="Email address"/>
-                    <input type="text" placeholder="Name"/>
-                    <input type="text" placeholder="Surname"/>
+                <form class="register-form" >
+                    <form:label path="placeholders"><spring:message code="username" var="placeholder"/></form:label>
+                    <input placeholder="Username" type="text" placeholder="${placeholder}" />
+                    <form:label path="placeholders"><spring:message code="password" var="placeholder"/></form:label>
+                    <input placeholder="Password" type="password" placeholder="${placeholder}"/>
+                    <form:label path="placeholders"><spring:message code="confirmPassword" var="placeholder"/></form:label>
+                    <input placeholder="Confirm password" type="password" placeholder="${placeholder}"/>
+                    <form:label path="placeholders"><spring:message code="emailAdress" var="placeholder"/></form:label>
+                    <input placeholder="Email address" type="text" placeholder="${placeholder}"/>
+                    <form:label path="placeholders"><spring:message code="name" var="placeholder"/></form:label>
+                    <input placeholder="Name" type="text" placeholder="${placeholder}"/>
+                    <form:label path="placeholders"><spring:message code="surname" var="placeholder"/></form:label>
+                    <input  placeholder="Surname" type="text" placeholder="${placeholder}"/>
                     <button>Create</button>
                     <p class="message">Already registered? <a href="#">Sign In</a></p>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 </form>
                 <form class="login-form">
-                    <input type="text" placeholder="Username"/>
-                    <input type="password" placeholder="Password"/>
+                    <form:label path="placeholders"><spring:message code="username" var="placeholder"/></form:label>
+                    <input placeholder="Username" type="text" placeholder="${placeholder}"/>
+                    <form:label path="placeholders"><spring:message code="password" var="placeholder"/></form:label>
+                    <input placeholder="Password" type="password" placeholder="${placeholder}"/>
                     <button>Login</button>
                     <p class="message">Not registered? <a href="#">Create an account</a></p>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 </form>
             </div>
         </div>
