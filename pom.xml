@@ -10,7 +10,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <version>1.4.2.RELEASE</version>
     </parent>
     <properties>
         <java-version>1.6</java-version>
@@ -20,17 +20,6 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>hibernate-annotations</groupId>
-            <artifactId>hibernate-annotations</artifactId>
-            <version>3.3.0.GA</version>
-        </dependency>
-
-        <dependency>
-            <groupId>hibernate-commons-annotations</groupId>
-            <artifactId>hibernate-commons-annotations</artifactId>
-            <version>3.0.0.GA</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -39,6 +28,28 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+           <groupId>org.hibernate</groupId>
+           <artifactId>hibernate-core</artifactId>
+           <version>3.3.2.ga</version>
+        </dependency>
+        <dependency>
+           <groupId>org.hibernate</groupId>
+           <artifactId>hibernate-annotations</artifactId>
+           <version>3.4.0.ga</version>
+        </dependency>
+        <dependency>
+           <groupId>org.hibernate</groupId>
+           <artifactId>hibernate-commons-annotations</artifactId>
+           <version>3.3.0.ga</version>
+        </dependency>
+        <dependency>
+           <groupId>org.hibernate</groupId>
+           <artifactId>hibernate-entitymanager</artifactId>
+           <version>3.4.0.ga</version>
+        </dependency> 
+
+
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
@@ -169,27 +180,6 @@
             <version>4.3.0.RELEASE</version>
             <type>jar</type>
         </dependency>
-        <!-- Hibernate framework -->
-        <dependency>
-            <groupId>hibernate</groupId>
-            <artifactId>hibernate3</artifactId>
-            <version>3.2.3.GA</version>
-        </dependency>
-
-        <!-- Hibernate annotation -->
-        <dependency>
-            <groupId>hibernate-annotations</groupId>
-            <artifactId>hibernate-annotations</artifactId>
-            <version>3.3.0.GA</version>
-        </dependency>
-
-        <dependency>
-            <groupId>hibernate-commons-annotations</groupId>
-            <artifactId>hibernate-commons-annotations</artifactId>
-            <version>3.0.0.GA</version>
-        </dependency>
-
-        <!-- Hibernate library dependecy start -->
         <dependency>
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
@@ -213,36 +203,14 @@
             <artifactId>antlr</artifactId>
             <version>2.7.7</version>
         </dependency>
-        <!-- Hibernate -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
-            <version>3.2.3.ga</version>
-        </dependency>
-        <!-- Hibernate library dependecy end -->
-        
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>5.2.4.Final</version>
-            <type>jar</type>
-        </dependency>
+
     </dependencies>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
             </plugin>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
@@ -292,5 +260,4 @@
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
-
 </project>

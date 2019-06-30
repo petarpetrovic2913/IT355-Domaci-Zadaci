@@ -61,7 +61,7 @@ body {
 			<input type="submit" value="Create User"
 				class="btn btn-large btn-success">
 		</form:form>
-               
+              
 	</div>
 </body>
 </html>

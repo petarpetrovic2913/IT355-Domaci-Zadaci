@@ -60,7 +60,7 @@ body {
 				<hr>
 			</c:forEach>
 		</c:if>
-            
+         
         </div>
 </body>
 </html>

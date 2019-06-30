@@ -6,16 +6,44 @@ package demo.springmvc.blog.domain;
  */
 
 import java.util.Date;
+import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@SuppressWarnings("unused")
+@Entity
+@Table(name = "comment")
 public class Comment {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        
+        @Column(name = "id")
 	private int id;
+        @Column(name = "content")
 	private String content;
+        @Column(name = "price")
 	private Date date;
-
+        @Column(name = "user_id")
 	private int user_id;
+        @Column(name = "post_id")
 	private int post_id;
+        @Column(name = "user_username")
 	private String user_username;
+        private List<Comment> contents;
 
+        public List<Comment> getContents() {
+            return contents;
+        }
+
+        public void setContents(List<Comment> contents) {
+            this.contents = contents;
+        }
+        
+        
 	public String getUser_username() {
 		return user_username;
 	}
@@ -63,4 +91,8 @@ public class Comment {
 	public void setPost_id(int post_id) {
 		this.post_id = post_id;
 	}
+
+        public Comment getCommentByID(int id) {
+            return null;
+        }
 }
