@@ -2,6 +2,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page isELIgnored="false"%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -50,7 +51,9 @@
                     <p class="message">Already registered? <a href="#">Sign In</a></p>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 </form>
-                <form class="login-form">
+                <form class="login-form" method="post" action="${flowExecutionUrl}">
+                    <input type="hidden" name="_eventId" value="performLogin">
+                    <input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}" />
                     <form:label path="placeholders"><spring:message code="username" var="placeholder"/></form:label>
                     <input placeholder="Username" type="text" placeholder="${placeholder}"/>
                     <form:label path="placeholders"><spring:message code="password" var="placeholder"/></form:label>
