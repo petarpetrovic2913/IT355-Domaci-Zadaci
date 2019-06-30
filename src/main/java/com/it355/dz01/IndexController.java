@@ -16,10 +16,11 @@ import org.springframework.ui.ModelMap;
 
 @Controller
 @RequestMapping("/")
+
 public class IndexController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public String printHello(ModelMap model) {
+    public String showIndex(ModelMap model) {
         //model.addAttribute("poruka", "IT355 Domaći1");
         return "index";
     }

@@ -19,7 +19,7 @@
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
     <bean class="org.springframework.web.servlet.resource.ResourceHttpRequestHandler" />   
      	
-    <mvc:resources mapping="/resources/**" location="/resources/" />
+    <mvc:resources mapping="WEB-INF/resources/" location="WEB-INF/resources/" />
     <mvc:annotation-driven />
     <mvc:default-servlet-handler />
 
